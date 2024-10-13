@@ -1,0 +1,9 @@
+<ActionBar title="Einstellungen" class="action-bar">
+  <NavigationButton text="Zurück" android.systemIcon="ic_menu_back" (tap)="goBack()"></NavigationButton>
+</ActionBar>
+
+<StackLayout class="settings-container">
+  <Label text="API URL" class="settings-label"></Label>
+  <TextField [(ngModel)]="apiUrl" hint="API URL eingeben" class="settings-input"></TextField>
+  <Button text="Speichern" (tap)="saveSettings()" class="settings-button"></Button>
+</StackLayout>

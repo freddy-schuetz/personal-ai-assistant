@@ -1,0 +1,31 @@
+.action-bar {
+  background-color: #075E54;
+  color: white;
+}
+
+.settings-container {
+  margin: 20;
+}
+
+.settings-label {
+  font-size: 16;
+  color: #075E54;
+  margin-bottom: 5;
+}
+
+.settings-input {
+  font-size: 14;
+  margin-bottom: 20;
+  border-width: 1;
+  border-color: #075E54;
+  border-radius: 5;
+  padding: 10;
+}
+
+.settings-button {
+  background-color: #075E54;
+  color: white;
+  font-size: 16;
+  padding: 10;
+  border-radius: 5;
+}

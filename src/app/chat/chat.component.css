@@ -1,0 +1,84 @@
+.action-bar {
+  background-color: #075E54;
+  color: white;
+}
+
+.action-item {
+  font-size: 20;
+  color: white;
+  padding: 10 15;
+}
+
+.message-list {
+  background-color: #ECE5DD;
+}
+
+.message-container {
+  padding: 5 10;
+}
+
+.message {
+  padding: 8 12;
+  margin: 2 0;
+  border-radius: 10;
+  max-width: 80%;
+}
+
+.user-message {
+  justify-content: flex-end;
+}
+
+.user-message .message {
+  background-color: #DCF8C6;
+  align-self: flex-end;
+}
+
+.assistant-message {
+  justify-content: flex-start;
+}
+
+.assistant-message .message {
+  background-color: #FFFFFF;
+  align-self: flex-start;
+}
+
+.message-content {
+  font-size: 16;
+  color: #000000;
+}
+
+.message-timestamp {
+  font-size: 12;
+  color: #7C7C7C;
+  text-align: right;
+  margin-top: 2;
+}
+
+.input-bar {
+  background-color: #F0F0F0;
+  padding: 5;
+}
+
+.input-field {
+  background-color: white;
+  border-radius: 20;
+  padding: 10;
+  placeholder-color: #7C7C7C;
+}
+
+.send-button {
+  width: 40;
+  height: 40;
+  border-radius: 20;
+  background-color: #075E54;
+  color: white;
+  font-size: 20;
+  padding: 0;
+  margin-left: 5;
+}
+
+.activity-indicator {
+  color: #075E54;
+  width: 50;
+  height: 50;
+}

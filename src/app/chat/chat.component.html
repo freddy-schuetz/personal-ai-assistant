@@ -1,0 +1,29 @@
+<ActionBar title="Personal AI Assistant" class="action-bar">
+  <NavigationButton visibility="collapsed"></NavigationButton>
+  <ActionItem ios.position="right" android.position="actionBar" (tap)="goToSettings()">
+    <Label text="&#x2699;" class="action-item"></Label>
+  </ActionItem>
+  <ActionItem ios.position="right" android.position="actionBar" (tap)="clearChatHistory()">
+    <Label text="&#x1F5D1;" class="action-item"></Label>
+  </ActionItem>
+</ActionBar>
+
+<GridLayout rows="*, auto">
+  <ListView [items]="messages" class="message-list" row="0">
+    <ng-template let-message="item">
+      <StackLayout [class]="message.role === 'user' ? 'message-container user-message' : 'message-container assistant-message'">
+        <StackLayout class="message" (longPress)="copyMessage(message)">
+          <Label [text]="message.content" textWrap="true" class="message-content"></Label>
+          <Label [text]="formatTimestamp(message.timestamp)" class="message-timestamp"></Label>
+        </StackLayout>
+      </StackLayout>
+    </ng-template>
+  </ListView>
+
+  <GridLayout columns="*, auto" row="1" class="input-bar">
+    <TextField col="0" [(ngModel)]="userInput" hint="Nachricht eingeben..." (returnPress)="sendMessage()" [isEnabled]="!isProcessing" class="input-field"></TextField>
+    <Button col="1" text="&#x27A4;" (tap)="sendMessage()" [isEnabled]="!isProcessing" class="send-button"></Button>
+  </GridLayout>
+
+  <ActivityIndicator [busy]="isProcessing" rowSpan="2" class="activity-indicator"></ActivityIndicator>
+</GridLayout>
